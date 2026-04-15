@@ -16,11 +16,16 @@ function App() {
     <Link to="/vans">Vans</Link>
       </nav>
      </header> 
+    
    
   <Routes>
 <Route path='/' element={<Home />} />
 <Route path='/about' element={<About />} />
-    </Routes>   
+    </Routes> 
+    
+ <footer className="flex items-center justify-center p-6 bg-zinc-700 text-gray-300">
+      <h1>&copy; 2022 #VANLIFE.</h1>
+     </footer>  
   </BrowserRouter>
     
   )
