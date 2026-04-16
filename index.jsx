@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Vans from "./pages/Vans"
+import './server';
 import './index.css';
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
   <Routes>
 <Route path='/' element={<Home />} />
 <Route path='/about' element={<About />} />
+<Route path='/vans' element={<Vans />} />
     </Routes> 
     
  <footer className="flex items-center justify-center p-6 bg-zinc-700 text-gray-300">
