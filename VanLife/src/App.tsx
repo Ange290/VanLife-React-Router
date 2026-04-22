@@ -18,12 +18,15 @@ function App() {
      
 
       <Routes >
-        <Route element ={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element ={<Layout />}>
+        <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="vans" element={<Vans />} />
-        <Route path="vans/:id" element={<VanDetail />} />
-      
+
+        <Route path="vans">
+          <Route index  element={<Vans />} />
+          <Route path=":id" element={<VanDetail />} />
+        </Route>
+
         <Route path="/host" element={<HostLayout />} >
         <Route index element={<Dashboard />} />
         <Route path="income" element={<Income />} />
@@ -33,9 +36,7 @@ function App() {
         </Route>
       </Routes>
 
-      <footer className="flex items-center justify-center bg-zinc-700 p-6 text-gray-300">
-        <h1>&copy; 2022 #VANLIFE.</h1>
-      </footer>
+      
     </BrowserRouter>
   );
 }
