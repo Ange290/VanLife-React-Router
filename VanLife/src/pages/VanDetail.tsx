@@ -1,7 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
+type Van = {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  imageUrl: string;
+  type: string;
+};
 
 export default function VanDetail() {
   const { id } = useParams();
