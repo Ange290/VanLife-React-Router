@@ -3,7 +3,9 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from '../src/pages/Home';
 import About from '../src/pages/About';
 import Vans from '../src/pages/Vans';
-import './App.css'
+import VanDetail from '../src/pages/VanDetail';
+import './server';
+import './index.css';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<VanDetail />} />
       </Routes>
 
       <footer className="flex items-center justify-center bg-zinc-700 p-6 text-gray-300">
