@@ -4,27 +4,22 @@ import Home from '../src/pages/Home';
 import About from '../src/pages/About';
 import Vans from '../src/pages/Vans';
 import VanDetail from '../src/pages/VanDetail';
+import Layout from './components/Layout';
 import './server';
 import './index.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <header className="flex items-center justify-between p-6">
-        <Link to="/" className="pl-4 text-xl font-bold">
-          #VANLIFE
-        </Link>
-        <nav className="flex gap-4 text-gray-700">
-          <Link to="/about">About</Link>
-          <Link to="/vans">Vans</Link>
-        </nav>
-      </header>
+     
 
-      <Routes>
+      <Routes >
+        <Route element ={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
         <Route path="/vans/:id" element={<VanDetail />} />
+        </Route>
       </Routes>
 
       <footer className="flex items-center justify-center bg-zinc-700 p-6 text-gray-300">
